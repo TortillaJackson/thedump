@@ -12,7 +12,7 @@ export const AITools = () => {
             </div>
             <h2 className="text-4xl font-light text-black">AI-Tools als Erfolgsfaktor</h2>
             <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-              Moderne KI-Technologien ermöglichen es kleinen Teams, große Erfolge zu erzielen
+              Erstmals in der Geschichte können Einzelpersonen ein Startup gründen und eigenständig Umsätze in Millionenhöhe erzielen.
             </p>
           </div>
           
@@ -31,9 +31,9 @@ export const AITools = () => {
               <div className="flex items-start space-x-4">
                 <Zap className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-medium text-black mb-2">Stratup.ai & PitchBob</h3>
+                  <h3 className="text-xl font-medium text-black mb-2">Experte durch KI</h3>
                   <p className="text-gray-600 font-light">
-                    Automatisierte Ideengenerierung, Marktvalidierung und professionelle Investorenpräsentationen
+                    Automatisierte Marktanalyse, Datengetriebene Entscheidungen.
                   </p>
                 </div>
               </div>
@@ -41,9 +41,9 @@ export const AITools = () => {
               <div className="flex items-start space-x-4">
                 <Target className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-medium text-black mb-2">ProAI & Business Planning</h3>
+                  <h3 className="text-xl font-medium text-black mb-2">MVP durch KIg</h3>
                   <p className="text-gray-600 font-light">
-                    KI-gestützte Geschäftsplanung und strategische Entscheidungsfindung
+                    KI-gestützte rapid MVP entwicklung für Web und Mobile. 
                   </p>
                 </div>
               </div>
@@ -51,9 +51,9 @@ export const AITools = () => {
               <div className="flex items-start space-x-4">
                 <Palette className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-medium text-black mb-2">Canva AI & Branding</h3>
+                  <h3 className="text-xl font-medium text-black mb-2">Sales durch KI</h3>
                   <p className="text-gray-600 font-light">
-                    Professionelles Design und Branding ohne teure Agenturen
+                    Von Lead generierung über qualifizierung bis zum Closing. Mit KI.
                   </p>
                 </div>
               </div>
@@ -63,7 +63,7 @@ export const AITools = () => {
                 <div>
                   <h3 className="text-xl font-medium text-black mb-2">Workflow-Automatisierung</h3>
                   <p className="text-gray-600 font-light">
-                    Tools wie Zapier ermöglichen es, komplexe Prozesse zu automatisieren und Zeit zu sparen
+                    Komplexe Aufgaben und Tools kombinieren und vollautomatisieren. Mit KI.
                   </p>
                 </div>
               </div>
