@@ -41,9 +41,9 @@ export const AITools = () => {
               <div className="flex items-start space-x-4">
                 <Target className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-medium text-black mb-2">MVP durch KIg</h3>
+                  <h3 className="text-xl font-medium text-black mb-2">MVP durch KI</h3>
                   <p className="text-gray-600 font-light">
-                    KI-gestützte rapid MVP entwicklung für Web und Mobile. 
+                    KI-gestützte rapid MVP Entwicklung für Web und Mobile. 
                   </p>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export const AITools = () => {
                 <div>
                   <h3 className="text-xl font-medium text-black mb-2">Sales durch KI</h3>
                   <p className="text-gray-600 font-light">
-                    Von Lead generierung über qualifizierung bis zum Closing. Mit KI.
+                    Von Lead Generierung über Qualifizierung bis zum Closing. Mit KI.
                   </p>
                 </div>
               </div>
