@@ -12,7 +12,7 @@ export const AITools = () => {
             </div>
             <h2 className="text-4xl font-light text-black">AI-Tools als Erfolgsfaktor</h2>
             <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-              Erstmals in der Geschichte können Einzelpersonen ein Startup gründen und eigenständig Umsätze in Millionenhöhe erzielen.
+              Moderne KI-Technologien ermöglichen es kleinen Teams, große Erfolge zu erzielen
             </p>
           </div>
           
@@ -43,7 +43,7 @@ export const AITools = () => {
                 <div>
                   <h3 className="text-xl font-medium text-black mb-2">MVP durch KI</h3>
                   <p className="text-gray-600 font-light">
-                    KI-gestützte rapid MVP Entwicklung für Web und Mobile. 
+                    KI-gestützte rapid MVP Entwicklung für Web und Mobile.
                   </p>
                 </div>
               </div>

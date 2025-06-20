@@ -1,42 +1,45 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Spline from '@splinetool/react-spline';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
-    <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/lovable-uploads/9c34d844-207f-485c-b823-1c82210d274f.png" 
-          alt="Mountain landscape" 
-          className="w-full h-full object-cover opacity-20"
+    <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden bg-black">
+      {/* Spline Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <Spline
+          scene="https://prod.spline.design/U-WEFUzhR-NrXYj0/scene.splinecode"
+          className="w-full h-full"
+          onMouseMove={(e) => {
+            // This enables mouse interaction with the Spline scene
+            console.log('Mouse interaction enabled');
+          }}
         />
-        <div className="absolute inset-0 bg-white/85"></div>
       </div>
       
-      <div className="container mx-auto relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <div className="space-y-8">
-            <div className="flex justify-center mb-6">
-              <img 
-                src="/lovable-uploads/5923070f-2f2f-487c-9c18-2a3705ccbf6a.png" 
-                alt="Cinque Monti Ventures" 
-                className="h-20 w-auto"
-              />
-            </div>
-            <h1 className="text-5xl lg:text-6xl font-light leading-tight text-black">
-              Von der Idee zum erfolgreichen Startup –{" "}
-              <span className="font-normal">mit System und Innovation</span>
+      {/* Content Overlay */}
+      <div className="relative z-10 container mx-auto">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-7xl font-light text-white leading-tight">
+              {t('hero.title')}
             </h1>
-            <p className="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto font-light">
-              Venture Building ist der systematische Aufbau neuer Unternehmen durch 
-              bewährte Methoden, erfahrene Teams und innovative AI-Tools.
+            <p className="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed">
+              {t('hero.subtitle')}
             </p>
           </div>
-          <div className="pt-4">
-            <Button size="lg" className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 font-light">
-              Jetzt Beratungstermin buchen
+          
+          <div className="pt-8">
+            <Button 
+              size="lg" 
+              className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6 font-light rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/50 shadow-white/30"
+              onClick={() => window.open('https://calendly.com/cinquemontiventures/cinquemontiventures', '_blank')}
+            >
+              {t('hero.cta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

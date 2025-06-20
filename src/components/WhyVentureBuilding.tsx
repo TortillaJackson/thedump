@@ -3,7 +3,7 @@ import { Clock, DollarSign, Shield, Users } from "lucide-react";
 
 export const WhyVentureBuilding = () => {
   return (
-    <section id="vorteile" className="py-20 px-6 bg-gray-50">
+    <section id="vorteile" className="py-20 px-6 bg-neutral-50">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-6">

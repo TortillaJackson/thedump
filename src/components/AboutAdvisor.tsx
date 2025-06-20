@@ -3,7 +3,7 @@ import { CheckCircle, Target, Users } from "lucide-react";
 
 export const AboutAdvisor = () => {
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section id="partner" className="py-20 px-6 bg-gray-50">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -15,8 +15,10 @@ export const AboutAdvisor = () => {
                   <h2 className="text-4xl font-light text-black">Ihr erfahrener Partner</h2>
                 </div>
                 <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  Mit über 10 Jahren Erfahrung im Aufbau und der Skalierung von Startups 
-                  verstehe ich die Herausforderungen und Chancen des modernen Venture Buildings.
+                  Fabio Chiaramonte bringt über 10 Jahre praktische Erfahrung im Aufbau und der Skalierung von Startups mit. 
+                  Als erfolgreicher Gründer, der selbst ein VC-backed Unternehmen aufgebaut hat, versteht er die Herausforderungen 
+                  und Chancen des modernen Venture Buildings aus erster Hand. Seine Beratung basiert auf echten Erfahrungen und 
+                  bewährten Strategien, die zum Erfolg führen.
                 </p>
               </div>
               
@@ -52,7 +54,7 @@ export const AboutAdvisor = () => {
               <div className="relative overflow-hidden rounded-lg">
                 <img 
                   src="/lovable-uploads/82170288-b9b0-44fe-a6cd-40e5c4528ef2.png" 
-                  alt="Erfahrener Venture Builder und Berater" 
+                  alt="Fabio Chiaramonte - Erfahrener Venture Builder und Berater" 
                   className="w-full h-auto object-cover"
                 />
               </div>
