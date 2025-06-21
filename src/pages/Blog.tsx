@@ -5,8 +5,10 @@ import BlogCard from "@/components/blog/BlogCard";
 import CreatePostDialog from "@/components/blog/CreatePostDialog";
 import LoginDialog from "@/components/blog/LoginDialog";
 import { useBlog } from "@/hooks/useBlog";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Blog = () => {
+  const { t } = useLanguage();
   const {
     posts,
     isAdmin,
@@ -58,9 +60,9 @@ const Blog = () => {
 
             {posts.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">Noch keine Blog-Posts vorhanden.</p>
+                <p className="text-gray-500 text-lg">{t('blog.noPosts')}</p>
                 {isAdmin && (
-                  <p className="text-gray-400 mt-2">Erstellen Sie Ihren ersten Blog-Post!</p>
+                  <p className="text-gray-400 mt-2">{t('blog.adminHint')}</p>
                 )}
               </div>
             )}

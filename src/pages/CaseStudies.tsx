@@ -4,8 +4,10 @@ import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { CallToAction } from "@/components/CallToAction";
 import { caseStudies, CaseStudy } from "@/data/caseStudiesData";
 import { useCaseStudyAnimation } from "@/hooks/useCaseStudyAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CaseStudies = () => {
+  const { t } = useLanguage();
   const { setCardRef } = useCaseStudyAnimation();
 
   const handleCaseStudyClick = (study: CaseStudy) => {
@@ -22,10 +24,10 @@ const CaseStudies = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-light text-gray-900 mb-6">
-              Case Studies
+              {t('caseStudies.title')}
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Erfolgreiche Ventures, die wir von der Idee bis zur Marktreife begleitet haben
+              {t('caseStudies.subtitle')}
             </p>
           </div>
 

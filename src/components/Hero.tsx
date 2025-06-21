@@ -39,7 +39,7 @@ export const Hero = () => {
       <div className="absolute bottom-0 right-0 w-48 h-16 bg-[#0f0f0f] z-20"></div>
       
       {/* Content Overlay */}
-      <div className="relative z-10 container mx-auto flex-1 flex items-center justify-center">
+      <div className="relative z-10 container mx-auto flex-1 flex items-center justify-center pt-24 md:pt-0">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           {/* Logo */}
           <div className="mb-8">
@@ -47,7 +47,7 @@ export const Hero = () => {
               src="/lovable-uploads/4d220c19-c47b-4f5b-bf1a-ccd3836819d3.png" 
               alt="Cinque Monti Ventures Logo" 
               className="h-24 md:h-32 w-auto mx-auto"
-              style={{ filter: 'drop-shadow(0 8px 32px rgba(0, 0, 0, 0.8))' }}
+              style={{ filter: 'drop-shadow(0 12px 48px rgba(0, 0, 0, 0.9)) drop-shadow(0 4px 16px rgba(0, 0, 0, 0.8))' }}
             />
           </div>
           
