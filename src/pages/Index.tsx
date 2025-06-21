@@ -8,10 +8,12 @@ import { Traction } from "@/components/Traction";
 import { AboutAdvisor } from "@/components/AboutAdvisor";
 import { BookConsultation } from "@/components/BookConsultation";
 import { Navigation } from "@/components/Navigation";
+import { LoadingAnimation } from "@/components/LoadingAnimation";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <LoadingAnimation />
       <Navigation />
       <Hero />
       <div id="prinzipien">
@@ -21,9 +23,11 @@ const Index = () => {
         <WhyVentureBuilding />
       </div>
       <AITools />
-      <CustomerQuotes />
+      <div id="partner">
+        <AboutAdvisor />
+      </div>
       <Traction />
-      <AboutAdvisor />
+      <CustomerQuotes />
       <BookConsultation />
     </div>
   );

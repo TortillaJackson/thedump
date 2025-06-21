@@ -2,7 +2,11 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Globe } from 'lucide-react';
 
-export const LanguageSelector = () => {
+interface LanguageSelectorProps {
+  isScrolledPastHero: boolean;
+}
+
+export const LanguageSelector = ({ isScrolledPastHero }: LanguageSelectorProps) => {
   const { language, setLanguage } = useLanguage();
 
   const languages = [
@@ -12,9 +16,13 @@ export const LanguageSelector = () => {
     { code: 'it', name: 'Italiano', flag: '🇮🇹' }
   ];
 
+  // Dynamic colors based on scroll position
+  const textColor = isScrolledPastHero ? 'text-gray-600' : 'text-gray-200';
+  const hoverColor = isScrolledPastHero ? 'hover:text-black' : 'hover:text-white';
+
   return (
     <div className="relative group">
-      <button className="flex items-center space-x-1 text-gray-600 hover:text-black transition-colors text-sm font-light">
+      <button className={`flex items-center space-x-1 ${textColor} ${hoverColor} transition-colors text-sm font-light`}>
         <Globe className="h-4 w-4" />
         <span>{languages.find(l => l.code === language)?.flag}</span>
       </button>

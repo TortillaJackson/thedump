@@ -23,13 +23,13 @@ export const Traction = () => {
   ];
 
   return (
-    <section id="traction" className="py-20 px-6 bg-white overflow-hidden">
+    <section id="traction" className="py-20 px-6 bg-white overflow-hidden shadow-sm">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Ventures Section */}
           <div className="space-y-8">
             <div className="text-center">
-              <h3 className="text-2xl font-light text-black">Ventures</h3>
+              <h3 className="text-2xl font-bold text-black">Ventures</h3>
             </div>
             
             {/* Ventures Logo Scroll */}
@@ -62,7 +62,7 @@ export const Traction = () => {
           {/* Traction Section */}
           <div className="space-y-8">
             <div className="text-center">
-              <h3 className="text-2xl font-light text-black">Traction</h3>
+              <h3 className="text-2xl font-bold text-black">Traction</h3>
             </div>
             
             {/* Traction Logo Scroll - moving right */}
