@@ -1,5 +1,4 @@
-
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'de' | 'en' | 'es' | 'it';
 
@@ -94,8 +93,33 @@ const translations = {
   }
 };
 
+// Function to detect browser language
+const detectBrowserLanguage = (): Language => {
+  const browserLang = navigator.language.toLowerCase();
+  
+  if (browserLang.startsWith('de')) return 'de';
+  if (browserLang.startsWith('es')) return 'es';
+  if (browserLang.startsWith('it')) return 'it';
+  
+  // Default to English for all other languages
+  return 'en';
+};
+
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('de');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check if there's a saved language preference
+    const savedLanguage = localStorage.getItem('preferredLanguage') as Language;
+    if (savedLanguage && Object.keys(translations).includes(savedLanguage)) {
+      return savedLanguage;
+    }
+    // Otherwise detect from browser
+    return detectBrowserLanguage();
+  });
+
+  // Save language preference when changed
+  useEffect(() => {
+    localStorage.setItem('preferredLanguage', language);
+  }, [language]);
 
   const t = (key: string): string => {
     return translations[language][key] || key;

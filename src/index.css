@@ -98,8 +98,14 @@
     @apply border-border;
   }
 
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 }
 
@@ -120,4 +126,10 @@
   to {
     transform: translateX(0);
   }
+}
+
+/* Case Studies animations */
+.case-study-card.animate-slide-in {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
