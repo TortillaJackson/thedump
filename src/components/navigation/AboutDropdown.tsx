@@ -27,7 +27,7 @@ export const AboutDropdown = ({ textColor, hoverColor, onSmoothScroll }: AboutDr
         onClick={handleUberUnsClick}
         className={`flex items-center space-x-1 ${textColor} ${hoverColor} transition-colors text-sm font-light cursor-pointer relative group outline-none`}
       >
-        <span>Über uns</span>
+        <span>{t('nav.about')}</span>
         <ChevronDown className="h-4 w-4" />
         <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#f0511e] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
       </button>
@@ -56,7 +56,7 @@ export const AboutDropdown = ({ textColor, hoverColor, onSmoothScroll }: AboutDr
             onClick={() => onSmoothScroll('partner')}
             className="w-full px-3 py-2 text-left text-sm hover:bg-gray-100 transition-colors font-light text-gray-700"
           >
-            Beratung
+            {t('nav.consulting')}
           </button>
           <button
             onClick={() => onSmoothScroll('traction')}

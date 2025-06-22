@@ -2,8 +2,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, User, Eye, Edit, Trash2, ExternalLink } from "lucide-react";
+import {Calendar, User, Eye, Edit, Trash2, ExternalLink } from "lucide-react";
 import { BlogPost } from "@/types/blog";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -12,6 +13,8 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post, isAdmin, onDelete }: BlogCardProps) => {
+  const { t } = useLanguage();
+  
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('de-DE', {
       year: 'numeric',
@@ -36,7 +39,7 @@ const BlogCard = ({ post, isAdmin, onDelete }: BlogCardProps) => {
           <Calendar className="h-4 w-4" />
           <span>{formatDate(post.createdAt)}</span>
           <User className="h-4 w-4 ml-2" />
-          <span>Fabio Chiaramonte</span>
+          <span>{t('blog.author')}</span>
         </div>
         <CardTitle className="text-xl font-light line-clamp-2">
           {post.title}
@@ -47,19 +50,19 @@ const BlogCard = ({ post, isAdmin, onDelete }: BlogCardProps) => {
       </CardHeader>
       <CardContent>
         <div className="flex items-center justify-between">
-          <Badge variant="secondary">Venture Building</Badge>
+          <Badge variant="secondary">{t('blog.category')}</Badge>
           <div className="flex space-x-2">
             {post.externalUrl ? (
               <Button variant="ghost" size="sm" asChild>
                 <a href={post.externalUrl} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="h-4 w-4 mr-1" />
-                  Ansehen
+                  {t('blog.view')}
                 </a>
               </Button>
             ) : (
               <Button variant="ghost" size="sm">
                 <Eye className="h-4 w-4 mr-1" />
-                Lesen
+                {t('blog.read')}
               </Button>
             )}
             {isAdmin && (

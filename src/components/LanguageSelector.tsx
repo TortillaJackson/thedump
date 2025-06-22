@@ -3,10 +3,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Globe } from 'lucide-react';
 
 interface LanguageSelectorProps {
-  isScrolledPastHero: boolean;
+  textColor: string;
+  hoverColor: string;
 }
 
-export const LanguageSelector = ({ isScrolledPastHero }: LanguageSelectorProps) => {
+export const LanguageSelector = ({ textColor, hoverColor }: LanguageSelectorProps) => {
   const { language, setLanguage } = useLanguage();
 
   const languages = [
@@ -15,10 +16,6 @@ export const LanguageSelector = ({ isScrolledPastHero }: LanguageSelectorProps) 
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'it', name: 'Italiano', flag: '🇮🇹' }
   ];
-
-  // Dynamic colors based on scroll position
-  const textColor = isScrolledPastHero ? 'text-gray-600' : 'text-gray-200';
-  const hoverColor = isScrolledPastHero ? 'hover:text-black' : 'hover:text-white';
 
   return (
     <div className="relative group">

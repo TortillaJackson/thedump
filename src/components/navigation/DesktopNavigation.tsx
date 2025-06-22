@@ -39,7 +39,7 @@ export const DesktopNavigation = ({
         to="/case-studies"
         className={`${textColor} ${hoverColor} transition-colors text-sm font-light cursor-pointer relative group ${isActive('/case-studies') ? activeColor : ''}`}
       >
-        Case Studies
+        {t('nav.caseStudies')}
         <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#f0511e] transition-transform duration-300 origin-left ${isActive('/case-studies') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
       </Link>
       
@@ -47,7 +47,7 @@ export const DesktopNavigation = ({
         to="/blog"
         className={`${textColor} ${hoverColor} transition-colors text-sm font-light cursor-pointer relative group ${isActive('/blog') ? activeColor : ''}`}
       >
-        Blog
+        {t('nav.blog')}
         <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#f0511e] transition-transform duration-300 origin-left ${isActive('/blog') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
       </Link>
       
@@ -55,11 +55,14 @@ export const DesktopNavigation = ({
         to="/kontakt"
         className={`${textColor} ${hoverColor} transition-colors text-sm font-light cursor-pointer relative group ${isActive('/kontakt') ? activeColor : ''}`}
       >
-        Kontakt
+        {t('nav.contact')}
         <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#f0511e] transition-transform duration-300 origin-left ${isActive('/kontakt') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></div>
       </Link>
       
-      <LanguageSelector isScrolledPastHero={shouldUseDarkTheme || shouldUseLightTheme} />
+      <LanguageSelector 
+        textColor={textColor}
+        hoverColor={hoverColor}
+      />
       <Button 
         className="bg-[#f0511e] text-white hover:bg-[#d4430f] text-sm font-light px-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50 shadow-orange-500/20"
         onClick={() => window.open('https://calendly.com/cinquemontiventures/cinquemontiventures', '_blank')}

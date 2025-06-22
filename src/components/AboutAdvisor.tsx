@@ -1,8 +1,11 @@
 
 import { CheckCircle, Target, Users } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const AboutAdvisor = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="partner" className="py-20 px-6 relative overflow-hidden">
       {/* Dark gradient background */}
@@ -31,10 +34,10 @@ export const AboutAdvisor = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Target className="h-6 w-6 text-white" />
-                    <h2 className="text-4xl font-light text-white">Ihr erfahrener Partner</h2>
+                    <h2 className="text-4xl font-light text-white">{t('about.title')}</h2>
                   </div>
                   <p className="text-lg text-gray-200 font-light leading-relaxed">
-                    Fabio Chiaramonte bringt über 10 Jahre praktische Erfahrung im Aufbau und der Skalierung von Startups mit. Als erfolgreicher Gründer, der selbst ein Venture Capital finanziertes Unternehmen aufgebaut hat und später die Perspektive im Venture Capital selbst einnahm, versteht er die Herausforderungen und Chancen des modernen Venture Buildings aus erster Hand. Seine Beratung basiert auf echten Erfahrungen und bewährten Strategien, die zum Erfolg führen.
+                    {t('about.description')}
                   </p>
                 </div>
                 
@@ -42,24 +45,24 @@ export const AboutAdvisor = () => {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="h-5 w-5 text-white mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-medium text-white mb-1">15+ erfolgreiche Ventures</h3>
-                      <p className="text-gray-200 font-light">Von der ersten Idee bis zur erfolgreichen Markteinführung</p>
+                      <h3 className="font-medium text-white mb-1">{t('traction.ventures.number')} {t('traction.ventures.label')}</h3>
+                      <p className="text-gray-200 font-light">{t('about.ventures.description')}</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <Users className="h-5 w-5 text-white mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-medium text-white mb-1">Multidisziplinäres Netzwerk</h3>
-                      <p className="text-gray-200 font-light">Zugang zu Experten aus Tech, Marketing und Finanzierung</p>
+                      <h3 className="font-medium text-white mb-1">{t('advantages.expertise.title')}</h3>
+                      <p className="text-gray-200 font-light">{t('advantages.expertise.description')}</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <Target className="h-5 w-5 text-white mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-medium text-white mb-1">Systematischer Ansatz</h3>
-                      <p className="text-gray-200 font-light">Bewährte Methoden kombiniert mit modernsten AI-Tools</p>
+                      <h3 className="font-medium text-white mb-1">{t('about.systematic.title')}</h3>
+                      <p className="text-gray-200 font-light">{t('about.systematic.description')}</p>
                     </div>
                   </div>
                 </div>
@@ -72,7 +75,7 @@ export const AboutAdvisor = () => {
                 <div className="relative overflow-hidden rounded-lg">
                   <img 
                     src="/lovable-uploads/82170288-b9b0-44fe-a6cd-40e5c4528ef2.png" 
-                    alt="Fabio Chiaramonte - Erfahrener Venture Builder und Berater" 
+                    alt={`${t('about.name')} - ${t('about.role')}`}
                     className="w-full h-auto object-cover"
                   />
                 </div>

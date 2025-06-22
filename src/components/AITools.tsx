@@ -1,8 +1,11 @@
 
 import { Bot, Zap, Target, Palette } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const AITools = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="ai-tools" className="py-20 px-6 bg-white relative overflow-hidden shadow-sm">
       {/* Grid Pattern Background */}
@@ -29,9 +32,9 @@ export const AITools = () => {
               <div className="flex justify-center mb-4">
                 <Bot className="h-8 w-8 text-black" />
               </div>
-              <h2 className="text-4xl font-light text-black">AI-Tools als Erfolgsfaktor</h2>
+              <h2 className="text-4xl font-light text-black">{t('aitools.title')}</h2>
               <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-                Moderne KI-Technologien ermöglichen es kleinen Teams, große Erfolge zu erzielen
+                {t('aitools.subtitle')}
               </p>
             </div>
           </ScrollAnimation>
@@ -54,9 +57,9 @@ export const AITools = () => {
                 <div className="flex items-start space-x-4">
                   <Zap className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-black mb-2">Experte durch KI</h3>
+                    <h3 className="text-xl font-medium text-black mb-2">{t('aitools.analysis.title')}</h3>
                     <p className="text-gray-600 font-light">
-                      Automatisierte Marktanalyse, Datengetriebene Entscheidungen.
+                      {t('aitools.analysis.description')}
                     </p>
                   </div>
                 </div>
@@ -64,9 +67,9 @@ export const AITools = () => {
                 <div className="flex items-start space-x-4">
                   <Target className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-black mb-2">MVP durch KI</h3>
+                    <h3 className="text-xl font-medium text-black mb-2">{t('aitools.validation.title')}</h3>
                     <p className="text-gray-600 font-light">
-                      KI-gestützte rapid MVP Entwicklung für Web und Mobile.
+                      {t('aitools.validation.description')}
                     </p>
                   </div>
                 </div>
@@ -74,9 +77,9 @@ export const AITools = () => {
                 <div className="flex items-start space-x-4">
                   <Palette className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-black mb-2">Sales durch KI</h3>
+                    <h3 className="text-xl font-medium text-black mb-2">{t('aitools.development.title')}</h3>
                     <p className="text-gray-600 font-light">
-                      Von Lead Generierung über Qualifizierung bis zum Closing. Mit KI.
+                      {t('aitools.development.description')}
                     </p>
                   </div>
                 </div>
@@ -84,9 +87,9 @@ export const AITools = () => {
                 <div className="flex items-start space-x-4">
                   <Bot className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-black mb-2">Workflow-Automatisierung</h3>
+                    <h3 className="text-xl font-medium text-black mb-2">{t('aitools.automation.title')}</h3>
                     <p className="text-gray-600 font-light">
-                      Komplexe Aufgaben und Tools kombinieren und vollautomatisieren. Mit KI.
+                      {t('aitools.automation.description')}
                     </p>
                   </div>
                 </div>

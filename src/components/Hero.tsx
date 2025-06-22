@@ -39,7 +39,7 @@ export const Hero = () => {
       <div className="absolute bottom-0 right-0 w-48 h-16 bg-[#0f0f0f] z-20"></div>
       
       {/* Content Overlay */}
-      <div className="relative z-10 container mx-auto flex-1 flex items-center justify-center pt-24 md:pt-0">
+      <div className="relative z-10 container mx-auto flex-1 flex items-center justify-center pt-48 sm:pt-44 md:pt-32">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           {/* Logo */}
           <div className="mb-8">
@@ -47,17 +47,19 @@ export const Hero = () => {
               src="/lovable-uploads/4d220c19-c47b-4f5b-bf1a-ccd3836819d3.png" 
               alt="Cinque Monti Ventures Logo" 
               className="h-24 md:h-32 w-auto mx-auto"
-              style={{ filter: 'drop-shadow(0 12px 48px rgba(0, 0, 0, 0.9)) drop-shadow(0 4px 16px rgba(0, 0, 0, 0.8))' }}
+              style={{ 
+                filter: 'drop-shadow(0 0 20px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 40px rgba(0, 0, 0, 0.8)) drop-shadow(0 4px 16px rgba(0, 0, 0, 1))'
+              }}
             />
           </div>
           
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-light text-white leading-tight" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)' }}>
-              Von der Idee zum erfolgreichen Startup<br />
-              <span className="font-bold">- mit System und Innovation</span>
+              {t('hero.title')}<br />
+              <span className="font-bold">{t('hero.subtitle')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 font-light max-w-4xl mx-auto leading-relaxed">
-              Venture Building ist der systematische Aufbau neuer Unternehmen durch bewährte Methoden, erfahrene Teams und innovativen AI-Tools.
+              {t('hero.description')}
             </p>
           </div>
           

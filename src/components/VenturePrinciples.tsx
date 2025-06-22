@@ -1,8 +1,11 @@
 
 import { Search, CheckSquare, Rocket, TrendingUp } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const VenturePrinciples = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="prinzipien" className="py-20 px-6 bg-white relative overflow-hidden shadow-sm">
       {/* Grid Pattern Background */}
@@ -29,9 +32,9 @@ export const VenturePrinciples = () => {
               <div className="flex justify-center mb-4">
                 <Search className="h-8 w-8 text-black" />
               </div>
-              <h2 className="text-4xl font-light text-black">Die 4 Phasen des Venture Building</h2>
+              <h2 className="text-4xl font-light text-black">{t('principles.title')}</h2>
               <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-                Systematischer Aufbau neuer Unternehmen durch bewährte Methoden
+                {t('principles.subtitle')}
               </p>
             </div>
           </ScrollAnimation>
@@ -43,9 +46,9 @@ export const VenturePrinciples = () => {
                   <Search className="h-12 w-12 text-black" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-xl font-medium text-black">1. Explore</h3>
+                  <h3 className="text-xl font-medium text-black">{t('principles.explore.title')}</h3>
                   <p className="text-gray-600 font-light">
-                    Identifikation von Marktchancen und Validierung von Geschäftsideen
+                    {t('principles.explore.description')}
                   </p>
                 </div>
               </div>
@@ -57,9 +60,9 @@ export const VenturePrinciples = () => {
                   <CheckSquare className="h-12 w-12 text-black" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-xl font-medium text-black">2. Validate</h3>
+                  <h3 className="text-xl font-medium text-black">{t('principles.validate.title')}</h3>
                   <p className="text-gray-600 font-light">
-                    Testen der Hypothesen und Entwicklung eines validierten Geschäftsmodells
+                    {t('principles.validate.description')}
                   </p>
                 </div>
               </div>
@@ -71,9 +74,9 @@ export const VenturePrinciples = () => {
                   <Rocket className="h-12 w-12 text-black" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-xl font-medium text-black">3. Build</h3>
+                  <h3 className="text-xl font-medium text-black">{t('principles.build.title')}</h3>
                   <p className="text-gray-600 font-light">
-                    Aufbau des MVP und Zusammenstellung des Gründerteams
+                    {t('principles.build.description')}
                   </p>
                 </div>
               </div>
@@ -85,9 +88,9 @@ export const VenturePrinciples = () => {
                   <TrendingUp className="h-12 w-12 text-black" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-xl font-medium text-black">4. Grow</h3>
+                  <h3 className="text-xl font-medium text-black">{t('principles.grow.title')}</h3>
                   <p className="text-gray-600 font-light">
-                    Skalierung und Wachstum des etablierten Ventures
+                    {t('principles.grow.description')}
                   </p>
                 </div>
               </div>

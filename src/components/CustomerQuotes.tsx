@@ -1,23 +1,26 @@
 
 import { Star } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const CustomerQuotes = () => {
+  const { t } = useLanguage();
+  
   const quotes = [
     {
-      text: "Fabio war ein echter Game-Changer für unser Startup. Durch seine strukturierte Herangehensweise konnten wir unsere Idee erfolgreich validieren und sogar erste Investoren gewinnen.",
+      text: t('quotes.quote1'),
       author: "Markus Hahn",
       company: "Fjalla Founder",
       rating: 5
     },
     {
-      text: "Mit Fabio konnten wir unser Venture zu einem weltweit bekannten Startup ausbauen und bekannte Venture Capital Investoren von uns überzeugen.",
+      text: t('quotes.quote2'),
       author: "Tilmann Holm",
       company: "GymCraft Founder",
       rating: 5
     },
     {
-      text: "Ich durfte mit Fabio in seiner Zeit bei FLYACTS arbeiten. Von der ersten Beratung bis zum erfolgreichen Launch - die Unterstützung war durchweg professionell und zielorientiert. Heute sind wir ein erfolgreiches Mobility Unternehmen mit stetig wachsender Kundenbasis.",
+      text: t('quotes.quote3'),
       author: "Nadine Güner",
       company: "GCars Founder",
       rating: 5
@@ -47,9 +50,9 @@ export const CustomerQuotes = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           <ScrollAnimation direction="center">
             <div className="text-center space-y-6">
-              <h2 className="text-4xl font-light text-white">Was unsere Kunden sagen</h2>
+              <h2 className="text-4xl font-light text-white">{t('quotes.title')}</h2>
               <p className="text-lg text-gray-200 font-light max-w-2xl mx-auto">
-                Erfolgsgeschichten von Gründern, die mit uns ihre Vision verwirklicht haben
+                {t('quotes.subtitle')}
               </p>
             </div>
           </ScrollAnimation>

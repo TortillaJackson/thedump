@@ -2,13 +2,14 @@
 import { Navigation } from "@/components/Navigation";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { CallToAction } from "@/components/CallToAction";
-import { caseStudies, CaseStudy } from "@/data/caseStudiesData";
+import { getCaseStudies, CaseStudy } from "@/data/caseStudiesData";
 import { useCaseStudyAnimation } from "@/hooks/useCaseStudyAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const CaseStudies = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { setCardRef } = useCaseStudyAnimation();
+  const caseStudies = getCaseStudies(language);
 
   const handleCaseStudyClick = (study: CaseStudy) => {
     if (study.websiteUrl) {

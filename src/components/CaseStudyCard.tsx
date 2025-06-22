@@ -48,7 +48,7 @@ export const CaseStudyCard = ({ study, index, cardRef, onCaseStudyClick }: CaseS
               </CardDescription>
             </CardHeader>
             
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-[#f0511e]/10 p-4 rounded-lg">
               <h4 className="font-medium text-gray-900 mb-2">Impact</h4>
               <p className="text-gray-600">{study.impact}</p>
             </div>
@@ -76,14 +76,14 @@ export const CaseStudyCard = ({ study, index, cardRef, onCaseStudyClick }: CaseS
         </div>
         
         {/* Image */}
-        <div className={`relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 ${
+        <div className={`relative overflow-hidden bg-[#f0511e] ${
           index % 2 === 1 ? 'lg:col-start-1' : ''
         }`}>
           <div className="aspect-square lg:aspect-auto lg:h-full flex items-center justify-center p-8">
             <img 
               src={study.image} 
               alt={study.name}
-              className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+              className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300 drop-shadow-2xl"
             />
           </div>
         </div>

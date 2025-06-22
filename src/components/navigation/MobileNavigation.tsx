@@ -63,7 +63,7 @@ export const MobileNavigation = ({
               onClick={() => onSmoothScroll('partner')}
               className="block w-full text-left text-gray-800 hover:text-[#f0511e] transition-colors text-base font-medium py-2"
             >
-              Beratung
+              {t('nav.consulting')}
             </button>
             <button 
               onClick={() => onSmoothScroll('traction')}
@@ -76,21 +76,21 @@ export const MobileNavigation = ({
               onClick={() => setMobileMenuOpen(false)}
               className="block text-gray-800 hover:text-[#f0511e] transition-colors text-base font-medium py-2"
             >
-              Case Studies
+              {t('nav.caseStudies')}
             </Link>
             <Link 
               to="/blog"
               onClick={() => setMobileMenuOpen(false)}
               className="block text-gray-800 hover:text-[#f0511e] transition-colors text-base font-medium py-2"
             >
-              Blog
+              {t('nav.blog')}
             </Link>
             <Link 
               to="/kontakt"
               onClick={() => setMobileMenuOpen(false)}
               className="block text-gray-800 hover:text-[#f0511e] transition-colors text-base font-medium py-2"
             >
-              Kontakt
+              {t('nav.contact')}
             </Link>
             <div className="pt-4 border-t border-gray-200">
               <Button 

@@ -1,8 +1,11 @@
 
 import { Clock, DollarSign, Shield, Users } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const WhyVentureBuilding = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="vorteile" className="py-20 px-6 relative overflow-hidden shadow-sm">
       {/* Moving Grid Pattern Background */}
@@ -29,9 +32,9 @@ export const WhyVentureBuilding = () => {
               <div className="flex justify-center mb-4">
                 <Clock className="h-8 w-8 text-white" />
               </div>
-              <h2 className="text-4xl font-light text-white">Warum Venture Building Zeit und Geld spart</h2>
+              <h2 className="text-4xl font-light text-white">{t('advantages.title')}</h2>
               <p className="text-lg text-gray-200 font-light max-w-2xl mx-auto">
-                Strukturierte Prozesse minimieren Risiken und beschleunigen den Erfolg. Dabei gilt weniger ist mehr! Durch unsere Erfahrung blenden wir unnötiges Berater rauschen aus und konzentrieren uns auf das, was wirkt.
+                {t('advantages.subtitle')}
               </p>
             </div>
           </ScrollAnimation>
@@ -43,9 +46,9 @@ export const WhyVentureBuilding = () => {
                 <div className="flex items-start space-x-4">
                   <Clock className="h-6 w-6 text-white mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-white mb-2">3x schneller am Markt</h3>
+                    <h3 className="text-xl font-medium text-white mb-2">{t('advantages.speed.title')}</h3>
                     <p className="text-gray-200 font-light">
-                      Durch bewährte Prozesse und erfahrene Teams verkürzen wir die Time-to-Market erheblich
+                      {t('advantages.speed.description')}
                     </p>
                   </div>
                 </div>
@@ -53,9 +56,9 @@ export const WhyVentureBuilding = () => {
                 <div className="flex items-start space-x-4">
                   <DollarSign className="h-6 w-6 text-white mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-white mb-2">60% Kostenersparnis</h3>
+                    <h3 className="text-xl font-medium text-white mb-2">{t('advantages.resources.title')}</h3>
                     <p className="text-gray-200 font-light">
-                      Keine teuren Fehlbesetzungen, flexible Unterstützung nur wenn nötig
+                      {t('advantages.resources.description')}
                     </p>
                   </div>
                 </div>
@@ -63,9 +66,9 @@ export const WhyVentureBuilding = () => {
                 <div className="flex items-start space-x-4">
                   <Shield className="h-6 w-6 text-white mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-white mb-2">85% Erfolgsrate</h3>
+                    <h3 className="text-xl font-medium text-white mb-2">{t('advantages.riskReduction.title')}</h3>
                     <p className="text-gray-200 font-light">
-                      Systematisches Vorgehen reduziert das Risiko des Scheiterns drastisch
+                      {t('advantages.riskReduction.description')}
                     </p>
                   </div>
                 </div>
@@ -73,9 +76,9 @@ export const WhyVentureBuilding = () => {
                 <div className="flex items-start space-x-4">
                   <Users className="h-6 w-6 text-white mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-medium text-white mb-2">Expertennetzwerk</h3>
+                    <h3 className="text-xl font-medium text-white mb-2">{t('advantages.expertise.title')}</h3>
                     <p className="text-gray-200 font-light">
-                      Zugang zu einem etablierten Netzwerk aus Spezialisten und Mentoren
+                      {t('advantages.expertise.description')}
                     </p>
                   </div>
                 </div>
