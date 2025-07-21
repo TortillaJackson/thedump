@@ -1,6 +1,9 @@
+
 import { Link } from "react-router-dom";
+
 export const Footer = () => {
-  return <footer className="bg-black text-white py-8">
+  return (
+    <footer className="bg-[#1a1a1a] text-white py-8">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
@@ -17,5 +20,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
