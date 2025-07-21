@@ -61,6 +61,11 @@ const CreatePostDialog = ({
             onChange={(e) => onNewPostChange({...newPost, sources: e.target.value})}
             rows={3}
           />
+          <Input
+            placeholder="Externer Link (optional)"
+            value={newPost.externalUrl}
+            onChange={(e) => onNewPostChange({...newPost, externalUrl: e.target.value})}
+          />
           <Button type="submit" className="w-full bg-[#f0511e] text-white hover:bg-[#d4430f]">
             Blog-Post veröffentlichen
           </Button>
