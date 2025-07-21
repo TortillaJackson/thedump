@@ -10,9 +10,11 @@ interface BlogCardProps {
   post: BlogPost;
   isAdmin: boolean;
   onDelete: (id: string) => void;
+  onEdit?: (post: BlogPost) => void;
+  onRead?: (post: BlogPost) => void;
 }
 
-const BlogCard = ({ post, isAdmin, onDelete }: BlogCardProps) => {
+const BlogCard = ({ post, isAdmin, onDelete, onEdit, onRead }: BlogCardProps) => {
   const { t } = useLanguage();
   
   const formatDate = (dateString: string) => {
@@ -60,14 +62,22 @@ const BlogCard = ({ post, isAdmin, onDelete }: BlogCardProps) => {
                 </a>
               </Button>
             ) : (
-              <Button variant="ghost" size="sm">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => onRead?.(post)}
+              >
                 <Eye className="h-4 w-4 mr-1" />
                 {t('blog.read')}
               </Button>
             )}
             {isAdmin && (
               <>
-                <Button variant="ghost" size="sm">
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  onClick={() => onEdit?.(post)}
+                >
                   <Edit className="h-4 w-4" />
                 </Button>
                 <Button 
