@@ -77,7 +77,7 @@ export const Navigation = () => {
   } = useNavigationTheme(isScrolledPastHero, isOverDarkSection);
 
   return (
-    <nav className="fixed top-6 left-8 right-8 z-50 bg-white/40 backdrop-blur-md border border-white/10 rounded-[4rem] shadow-lg max-w-7xl mx-auto">
+    <nav className="fixed top-6 left-8 right-8 z-50 bg-white/20 backdrop-blur-md border border-white/10 rounded-[4rem] shadow-lg max-w-7xl mx-auto">
       <div className="px-10 py-4">
         <div className="flex items-center justify-between">
           <NavigationLogo 

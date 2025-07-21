@@ -21,8 +21,8 @@ export const CustomerQuotes = () => {
     },
     {
       text: t('quotes.quote3'),
-      author: "Nadine Güner",
-      company: "GCars Founder",
+      author: "Nadin Güner",
+      company: "G-Cars Founder",
       rating: 5
     }
   ];

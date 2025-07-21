@@ -35,20 +35,33 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // For now, simulate a successful submission since Netlify forms need deployment
-      // In a real deployment, this would work with Netlify's form handling
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
-      
-      toast({
-        title: "Nachricht gesendet!",
-        description: "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
+      // Create FormData for Netlify submission
+      const formDataForSubmission = new FormData();
+      formDataForSubmission.append('form-name', 'contact');
+      formDataForSubmission.append('name', formData.name);
+      formDataForSubmission.append('email', formData.email);
+      formDataForSubmission.append('company', formData.company);
+      formDataForSubmission.append('message', formData.message);
+      formDataForSubmission.append('recipient', 'fabio@5monti.com');
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataForSubmission as any).toString()
       });
-      
-      setFormData({ name: "", email: "", company: "", message: "" });
-      setCaptchaReset(prev => prev + 1);
-      setIsCaptchaValid(false);
-      
-      console.log('Form data would be submitted:', formData);
+
+      if (response.ok) {
+        toast({
+          title: "Nachricht gesendet!",
+          description: "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
+        });
+        
+        setFormData({ name: "", email: "", company: "", message: "" });
+        setCaptchaReset(prev => prev + 1);
+        setIsCaptchaValid(false);
+      } else {
+        throw new Error('Network response was not ok');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
@@ -86,8 +99,10 @@ export const ContactForm = () => {
           className="space-y-6"
           data-netlify="true"
           name="contact"
+          method="POST"
         >
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="recipient" value="fabio@5monti.com" />
           
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
