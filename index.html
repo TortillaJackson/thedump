@@ -20,6 +20,15 @@
   </head>
 
   <body>
+    <!-- Hidden form for Netlify form detection during build -->
+    <form name="contact" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <textarea name="message"></textarea>
+      <input type="hidden" name="recipient" value="fabio@5monti.com" />
+    </form>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
